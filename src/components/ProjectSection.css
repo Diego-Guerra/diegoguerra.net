@@ -1,0 +1,23 @@
+.project-section {
+  padding: 3rem 1.5rem;
+}
+
+.project-section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.project-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
