@@ -14,7 +14,7 @@
 
 .project-card:hover {
   transform: translateY(-3px);
-  border-color: #4a9eff;
+  border-color: var(--card-hover-border);
 }
 
 .project-card-image {
@@ -62,7 +62,7 @@
 .project-card-tag {
   font-size: 0.7rem;
   padding: 0.2rem 0.5rem;
-  background-color: #1e1e1e;
-  color: #808080;
+  background-color: var(--tag-bg);
+  color: var(--tag-color);
   border-radius: 4px;
 }

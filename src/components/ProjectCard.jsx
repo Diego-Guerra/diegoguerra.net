@@ -1,11 +1,13 @@
 import "./ProjectCard.css";
 
 function ProjectCard({ project, onClick }) {
+  const thumbnail = project.images && project.images.length > 0 ? project.images[0] : null;
+
   return (
     <button className="project-card" onClick={() => onClick(project)}>
       <div className="project-card-image">
-        {project.image ? (
-          <img src={project.image} alt={project.title} />
+        {thumbnail ? (
+          <img src={thumbnail} alt={project.title} />
         ) : (
           <div className="project-card-image-placeholder">
             {project.title.charAt(0)}

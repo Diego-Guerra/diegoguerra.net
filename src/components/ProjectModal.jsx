@@ -1,11 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./ProjectModal.css";
 
 function ProjectModal({ project, onClose }) {
+  const [imageIndex, setImageIndex] = useState(0);
+  const hasImages = project.images && project.images.length > 0;
+  const hasMultiple = hasImages && project.images.length > 1;
+
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === "Escape") {
         onClose();
+      }
+      if (hasMultiple) {
+        if (e.key === "ArrowLeft") {
+          setImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
+        }
+        if (e.key === "ArrowRight") {
+          setImageIndex((prev) => (prev + 1) % project.images.length);
+        }
       }
     }
     document.addEventListener("keydown", handleKeyDown);
@@ -15,7 +27,12 @@ function ProjectModal({ project, onClose }) {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  }, [onClose, hasMultiple, project.images]);
+
+  // Reset image index when project changes
+  useEffect(() => {
+    setImageIndex(0);
+  }, [project.id]);
 
   function handleBackdropClick(e) {
     if (e.target === e.currentTarget) {
@@ -23,12 +40,25 @@ function ProjectModal({ project, onClose }) {
     }
   }
 
-  const formattedDate = project.date
-    ? new Date(project.date + "-01").toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-      })
-    : null;
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+  ];
+
+  function formatSingleDate(dateStr) {
+    const [year, month] = dateStr.trim().split("-");
+    return `${monthNames[parseInt(month, 10) - 1]} ${year}`;
+  }
+
+  let formattedDate = null;
+  if (project.date) {
+    const parts = project.date.split("–").map((s) => s.trim());
+    if (parts.length === 2) {
+      formattedDate = `${formatSingleDate(parts[0])} – ${formatSingleDate(parts[1])}`;
+    } else {
+      formattedDate = formatSingleDate(project.date);
+    }
+  }
 
   return (
     <div className="modal-backdrop" onClick={handleBackdropClick}>
@@ -37,9 +67,45 @@ function ProjectModal({ project, onClose }) {
           &times;
         </button>
 
-        {project.image && (
-          <div className="modal-image">
-            <img src={project.image} alt={project.title} />
+        {hasImages && (
+          <div className="modal-gallery">
+            <img
+              src={project.images[imageIndex]}
+              alt={`${project.title} — image ${imageIndex + 1}`}
+              className="modal-gallery-image"
+            />
+            {hasMultiple && (
+              <>
+                <button
+                  className="modal-gallery-arrow modal-gallery-arrow-left"
+                  onClick={() =>
+                    setImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length)
+                  }
+                  aria-label="Previous image"
+                >
+                  ‹
+                </button>
+                <button
+                  className="modal-gallery-arrow modal-gallery-arrow-right"
+                  onClick={() =>
+                    setImageIndex((prev) => (prev + 1) % project.images.length)
+                  }
+                  aria-label="Next image"
+                >
+                  ›
+                </button>
+                <div className="modal-gallery-dots">
+                  {project.images.map((_, i) => (
+                    <button
+                      key={i}
+                      className={`modal-gallery-dot ${i === imageIndex ? "modal-gallery-dot-active" : ""}`}
+                      onClick={() => setImageIndex(i)}
+                      aria-label={`Go to image ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         )}
 

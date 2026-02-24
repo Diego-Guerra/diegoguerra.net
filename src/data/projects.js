@@ -1,23 +1,26 @@
+import code2Image from "../assets/images/code-2/image.png";
+import school1_1 from "../assets/images/school-1/_1.png";
+import school1_2 from "../assets/images/school-1/1.png";
+import school1_3 from "../assets/images/school-1/2.png";
+import school1_4 from "../assets/images/school-1/3.png";
+import school1_5 from "../assets/images/school-1/4.png";
+import school1_6 from "../assets/images/school-1/5.png";
+import school1_7 from "../assets/images/school-1/6.png";
+import school1_8 from "../assets/images/school-1/7.png";
+import school1_9 from "../assets/images/school-1/8.png";
+import school1_10 from "../assets/images/school-1/9.png";
+import school1_11 from "../assets/images/school-1/10.png";
+
 export const designProjects = [
   {
     id: "design-1",
-    title: "Brand Identity Redesign",
+    title: "Thumbnails for YouTube Channel",
     description:
-      "Redesigned the visual identity for a local coffee shop, including logo, color palette, and typography guidelines.",
-    image: "",
+      "Collaborated with content creator @joelatwar to get source material to then use in Photoshop and firefly to create thumbnails for his YouTube channel.",
+    images: [],
     link: "",
-    tags: ["Branding", "Logo", "Typography"],
+    tags: ["Branding", "Logo", "Affinity Photo", "Firefly"],
     date: "2025-09",
-  },
-  {
-    id: "design-2",
-    title: "Event Poster Series",
-    description:
-      "Created a series of promotional posters for campus events using bold typography and minimal color palettes.",
-    image: "",
-    link: "",
-    tags: ["Print", "Poster", "Layout"],
-    date: "2025-11",
   },
 ];
 
@@ -27,65 +30,45 @@ export const codeProjects = [
     title: "Portfolio Website",
     description:
       "This website! Built with React and Vite, deployed on Cloudflare Pages. A minimalist dark-themed single-page portfolio.",
-    image: "",
+    images: [],
     link: "https://github.com/diegoguerra/diegoguerra.net",
     tags: ["React", "Vite", "CSS"],
     date: "2026-02",
   },
   {
     id: "code-2",
-    title: "Weather Dashboard",
+    title: "Video Game",
     description:
-      "A simple weather dashboard that displays current conditions and a 5-day forecast using a public API.",
-    image: "",
+      "Using GameMaker Studio 2, I created a rudamentary isometric dungeon crawler with a simplke ai for the enemies to target and track the player at a certain range, a movement system for the player, and a basic health and damage system for both the player and enemies.",
+    images: [code2Image],
     link: "",
-    tags: ["JavaScript", "API", "HTML"],
-    date: "2025-10",
+    tags: ["GameMakerStudio", "C#", "Procreate"],
+    date: "2026-02",
   },
 ];
 
 export const schoolProjects = [
   {
     id: "school-1",
-    title: "Data Structures Visualizer",
+    title: "Yearbook 2024",
     description:
-      "An interactive tool that visualizes common data structures like linked lists, stacks, and binary trees.",
-    image: "",
+      "Using Affinity Photo and Canva I designed the cover and many of the assets as well as ~70% of the pages for the 2024 yearbook, which was distributed to all students and staff at my Summit Olympus High School.", 
+    images: [school1_1, school1_2, school1_3, school1_4, school1_5, school1_6, school1_7, school1_8, school1_9, school1_10, school1_11],
     link: "",
-    tags: ["Java", "Algorithms", "CS"],
-    date: "2025-12",
-  },
-  {
-    id: "school-2",
-    title: "Research Paper: AI in Education",
-    description:
-      "A research paper exploring the impact of artificial intelligence tools on modern education and learning outcomes.",
-    image: "",
-    link: "",
-    tags: ["Research", "Writing", "AI"],
-    date: "2026-01",
+    tags: ["Digital Design", "Afinity Photo"],
+    date: "2025-04",
   },
 ];
 
 export const workProjects = [
   {
     id: "work-1",
-    title: "Inventory Tracking System",
+    title: "Aviron Invoice Tracker",
     description:
-      "Built a spreadsheet-based inventory tracking system for a small retail business, improving stock accuracy.",
-    image: "",
+      "As a Software Consultant Intern at Aviron Labs during the summer of 2025 Contributed to full-stack web application development using .NET, C#, and React to deliver scalable solutions for client projects, tracked clients, time, date and projects, using Microsoft Visual Studio and github copilot.",
+    images: [],
     link: "",
-    tags: ["Excel", "Automation", "Business"],
-    date: "2025-08",
-  },
-  {
-    id: "work-2",
-    title: "Social Media Campaign",
-    description:
-      "Managed and created content for a local business social media campaign that increased engagement by 40%.",
-    image: "",
-    link: "",
-    tags: ["Marketing", "Content", "Analytics"],
-    date: "2025-06",
+    tags: ["Software", ".NET", "Internship"],
+    date: "2025-06 – 2025-08"
   },
 ];

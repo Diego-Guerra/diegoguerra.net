@@ -16,6 +16,56 @@
   justify-content: space-between;
 }
 
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.fade-toggle {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-toggle::after {
+  content: "·";
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.fade-toggle:hover::after {
+  color: #cccccc;
+}
+
+.fade-toggle-active::after {
+  background: linear-gradient(135deg, #4040E0, #7B2FBE, #E94B8A, #F0923A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fade-toggle-active:hover::after {
+  background: linear-gradient(135deg, #4040E0, #7B2FBE, #E94B8A, #F0923A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fade-toggle-dot {
+  display: none;
+}
+
 .navbar-logo {
   font-size: 1.1rem;
   font-weight: 600;
@@ -39,5 +89,29 @@
 }
 
 .navbar-links a:hover {
-  color: #4a9eff;
+  color: var(--accent);
+}
+
+/* Fade theme: gradient name */
+:root.fade-theme .navbar-logo {
+  background: linear-gradient(90deg, #4040E0, #7B2FBE, #E94B8A, #F0923A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fade theme: gradient section titles */
+:root.fade-theme .project-section-title {
+  background: linear-gradient(90deg, #4040E0, #7B2FBE, #E94B8A, #F0923A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fade theme: gradient hero name */
+:root.fade-theme .hero-text h1 {
+  background: linear-gradient(90deg, #4040E0, #7B2FBE, #E94B8A, #F0923A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

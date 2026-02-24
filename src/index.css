@@ -10,6 +10,193 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --accent: #4a9eff;
+  --accent-hover: #4a9eff;
+  --card-hover-border: #4a9eff;
+  --link-btn-bg: #4a9eff;
+  --link-btn-text: #000000;
+  --hero-initials: #4a9eff;
+  --tag-bg: #1e1e1e;
+  --tag-color: #808080;
+}
+
+:root.fade-theme {
+  --accent: #E94B8A;
+  --accent-hover: #F0923A;
+  --card-hover-border: #7B2FBE;
+  --link-btn-bg: linear-gradient(90deg, #4040E0, #7B2FBE, #E94B8A, #F0923A);
+  --link-btn-text: #000000;
+  --hero-initials: #E94B8A;
+  --tag-bg: rgba(233, 75, 138, 0.15);
+  --tag-color: #E94B8A;
+  --bg: #110a14;
+  --card-bg: rgba(25, 12, 30, 0.8);
+  --card-border: rgba(123, 47, 190, 0.3);
+  --text: #f0d0e8;
+  --text-muted: #a07090;
+}
+
+:root.fade-theme body {
+  background-color: #110a14;
+  color: #f0d0e8;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(123, 47, 190, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(233, 75, 138, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 50%, rgba(240, 146, 58, 0.1) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+:root.fade-theme body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    135deg,
+    rgba(64, 64, 224, 0.12),
+    rgba(123, 47, 190, 0.12),
+    rgba(233, 75, 138, 0.12),
+    rgba(240, 146, 58, 0.12),
+    rgba(123, 47, 190, 0.12),
+    rgba(64, 64, 224, 0.12)
+  );
+  background-size: 400% 400%;
+  animation: fadeGradientMove 12s ease infinite;
+}
+
+@keyframes fadeGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fade theme: navbar */
+:root.fade-theme .navbar {
+  background-color: rgba(17, 10, 20, 0.9);
+  border-bottom: 1px solid rgba(123, 47, 190, 0.3);
+}
+
+/* Fade theme: nav links */
+:root.fade-theme .navbar-links a {
+  color: #a07090;
+}
+
+/* Fade theme: hero */
+:root.fade-theme .hero-bio {
+  color: #a07090;
+}
+
+:root.fade-theme .hero-photo-placeholder {
+  background-color: rgba(123, 47, 190, 0.15);
+  border-color: rgba(233, 75, 138, 0.4);
+  box-shadow: 0 0 20px rgba(233, 75, 138, 0.2);
+}
+
+:root.fade-theme .hero-link {
+  color: #a07090;
+  border-color: rgba(123, 47, 190, 0.3);
+}
+
+:root.fade-theme .hero-link:hover {
+  border-color: #E94B8A;
+  box-shadow: 0 0 12px rgba(233, 75, 138, 0.3);
+}
+
+/* Fade theme: section divider line */
+:root.fade-theme .project-section-title {
+  border-bottom: none;
+  padding-bottom: 0.75rem;
+  position: relative;
+}
+
+:root.fade-theme .project-section-title::after {
+  content: "";
+  display: block;
+  margin-top: 0.5rem;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, #4040E0, #7B2FBE, #E94B8A, #F0923A, #FFD93D);
+}
+
+/* Fade theme: cards */
+:root.fade-theme .project-card {
+  background-color: rgba(25, 12, 30, 0.8);
+  border-color: rgba(123, 47, 190, 0.25);
+  box-shadow: 0 0 8px rgba(123, 47, 190, 0.1);
+}
+
+:root.fade-theme .project-card:hover {
+  border-color: #E94B8A;
+  box-shadow:
+    0 0 15px rgba(233, 75, 138, 0.3),
+    0 0 30px rgba(123, 47, 190, 0.15);
+}
+
+:root.fade-theme .project-card-image {
+  background-color: rgba(17, 10, 20, 0.6);
+}
+
+:root.fade-theme .project-card-image-placeholder {
+  color: rgba(123, 47, 190, 0.3);
+}
+
+:root.fade-theme .project-card-title {
+  color: #f0d0e8;
+}
+
+/* Fade theme: modal */
+:root.fade-theme .modal-backdrop {
+  background-color: rgba(17, 10, 20, 0.9);
+}
+
+:root.fade-theme .modal-content {
+  background-color: rgba(25, 12, 30, 0.95);
+  border-color: rgba(123, 47, 190, 0.4);
+  box-shadow:
+    0 0 30px rgba(233, 75, 138, 0.2),
+    0 0 60px rgba(123, 47, 190, 0.1);
+}
+
+:root.fade-theme .modal-title {
+  color: #f0d0e8;
+}
+
+:root.fade-theme .modal-date {
+  color: #a07090;
+}
+
+:root.fade-theme .modal-description {
+  color: #a07090;
+}
+
+:root.fade-theme .modal-close:hover {
+  color: #E94B8A;
+  background-color: rgba(233, 75, 138, 0.1);
+}
+
+/* Fade theme: footer */
+:root.fade-theme .footer {
+  border-top: none;
+  position: relative;
+}
+
+:root.fade-theme .footer::before {
+  content: "";
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #4040E0, #7B2FBE, #E94B8A, #F0923A, #FFD93D);
+}
+
+:root.fade-theme .footer p {
+  color: #a07090;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
