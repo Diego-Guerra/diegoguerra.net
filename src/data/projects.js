@@ -1,3 +1,4 @@
+import design1ThumbOne from "../assets/images/design-1/Thumb One.png";
 import code2Image from "../assets/images/code-2/image.png";
 import school1_1 from "../assets/images/school-1/_1.png";
 import school1_2 from "../assets/images/school-1/1.png";
@@ -17,7 +18,7 @@ export const designProjects = [
     title: "Thumbnails for YouTube Channel",
     description:
       "Collaborated with content creator @joelatwar to get source material to then use in Photoshop and firefly to create thumbnails for his YouTube channel.",
-    images: [],
+    images: [design1ThumbOne],
     link: "",
     tags: ["Branding", "Logo", "Affinity Photo", "Firefly"],
     date: "2025-09",
