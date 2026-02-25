@@ -32,7 +32,7 @@ export const codeProjects = [
     description:
       "This website! Built with React and Vite, deployed on Cloudflare Pages. A minimalist dark-themed single-page portfolio.",
     images: [],
-    link: "https://github.com/diegoguerra/diegoguerra.net",
+    link: "https://github.com/Diego-Guerra/diegoguerra.net",
     tags: ["React", "Vite", "CSS"],
     date: "2026-02",
   },

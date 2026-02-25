@@ -1,11 +1,24 @@
+import { useState } from "react";
+import profilePhoto from "../assets/PHOTO.png";
 import "./Hero.css";
 
 function Hero() {
+  const [photoError, setPhotoError] = useState(false);
+
   return (
     <section id="about" className="hero">
       <div className="hero-inner">
         <div className="hero-photo-wrapper">
-          <div className="hero-photo-placeholder">DG</div>
+          {photoError ? (
+            <div className="hero-photo-placeholder">DG</div>
+          ) : (
+            <img
+              src={profilePhoto}
+              alt="Diego Guerra"
+              className="hero-photo"
+              onError={() => setPhotoError(true)}
+            />
+          )}
         </div>
         <div className="hero-text">
           <h1>Diego Guerra</h1>
