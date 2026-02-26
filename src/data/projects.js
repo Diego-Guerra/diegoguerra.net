@@ -1,5 +1,8 @@
 import design1ThumbOne from "../assets/images/design-1/Thumb One.png";
 import design1ThumbTwo from "../assets/images/design-1/Thumb Two.png";
+import code1Image1 from "../assets/images/code-1/code1-1.png";
+import code1Image2 from "../assets/images/code-1/code1-2.png";
+import code1Image3 from "../assets/images/code-1/code1-3.png";
 import code2Image from "../assets/images/code-2/image.png";
 import school1_1 from "../assets/images/school-1/_1.png";
 import school1_2 from "../assets/images/school-1/1.png";
@@ -32,7 +35,7 @@ export const codeProjects = [
     title: "Portfolio Website",
     description:
       "This website! Built with React and Vite, deployed on Cloudflare Pages. A minimalist dark-themed single-page portfolio.",
-    images: [],
+    images: [code1Image1, code1Image2, code1Image3],
     link: "https://github.com/Diego-Guerra/diegoguerra.net",
     tags: ["React", "Vite", "CSS"],
     date: "2026-02",
