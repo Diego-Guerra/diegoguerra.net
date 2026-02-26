@@ -1,5 +1,5 @@
 import design1ThumbOne from "../assets/images/design-1/Thumb One.png";
-import design1ThumbTwo from "../assets/images/design-1/Thumb Two.jpg";
+import design1ThumbTwo from "../assets/images/design-1/Thumb Two.png";
 import code2Image from "../assets/images/code-2/image.png";
 import school1_1 from "../assets/images/school-1/_1.png";
 import school1_2 from "../assets/images/school-1/1.png";
