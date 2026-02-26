@@ -1,4 +1,5 @@
 import design1ThumbOne from "../assets/images/design-1/Thumb One.png";
+import design1ThumbTwo from "../assets/images/design-1/Thumb Two.jpg";
 import code2Image from "../assets/images/code-2/image.png";
 import school1_1 from "../assets/images/school-1/_1.png";
 import school1_2 from "../assets/images/school-1/1.png";
@@ -18,9 +19,9 @@ export const designProjects = [
     title: "Thumbnails for YouTube Channel",
     description:
       "Collaborated with content creator @joelatwar to get source material to then use in Photoshop and firefly to create thumbnails for his YouTube channel.",
-    images: [design1ThumbOne],
+    images: [design1ThumbOne, design1ThumbTwo],
     link: "",
-    tags: ["Branding", "Logo", "Affinity Photo", "Firefly"],
+    tags: ["Branding", "Logo", "Affinity Photo"],
     date: "2025-09",
   },
 ];
@@ -69,7 +70,7 @@ export const workProjects = [
       "As a Software Consultant Intern at Aviron Labs during the summer of 2025 Contributed to full-stack web application development using .NET, C#, and React to deliver scalable solutions for client projects, tracked clients, time, date and projects, using Microsoft Visual Studio and github copilot.",
     images: [],
     link: "",
-    tags: ["Software", ".NET", "Internship"],
+    tags: [".NET", "Internship"],
     date: "2025-06 – 2025-08"
   },
 ];
