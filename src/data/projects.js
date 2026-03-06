@@ -4,6 +4,12 @@ import code1Image1 from "../assets/images/code-1/code1-1.png";
 import code1Image2 from "../assets/images/code-1/code1-2.png";
 import code1Image3 from "../assets/images/code-1/code1-3.png";
 import code2Image from "../assets/images/code-2/image.png";
+import paintBoyImage1 from "../assets/images/code-3/Paintboy-1.png";
+import paintBoyImage2 from "../assets/images/code-3/Paintboy-2.png";
+import paintBoyImage3 from "../assets/images/code-3/Paintboy-3.png";
+import paintBoyImage4 from "../assets/images/code-3/Paintboy-4.png";
+import paintBoyImage5 from "../assets/images/code-3/Paintboy-5.png";
+import paintBoyImage6 from "../assets/images/code-3/Paintboy-6.png";
 import school1_1 from "../assets/images/school-1/_1.png";
 import school1_2 from "../assets/images/school-1/1.png";
 import school1_3 from "../assets/images/school-1/2.png";
@@ -30,6 +36,16 @@ export const designProjects = [
 ];
 
 export const codeProjects = [
+  {
+    id: "code-3",
+    title: "PaintBoy",
+    description:
+      "PaintBoy is a web app for miniature/tabletop painters (Warhammer, D&D, etc.). You pick a color using a color picker or hex code, and it instantly tells you which real paints from brands like Citadel, Vallejo, Army Painter, and AK Interactive are the closest match. It shows swatches and links to buy them. Users can also save palettes and favorite paints.",
+    images: [paintBoyImage1, paintBoyImage2, paintBoyImage3, paintBoyImage4, paintBoyImage5, paintBoyImage6],
+    link: "https://www.paintboy.app/",
+    tags: ["React", "Cloudflare Workers"],
+    date: "2026-03",
+  },
   {
     id: "code-1",
     title: "Portfolio Website",
