@@ -4,6 +4,12 @@ import code1Image1 from "../assets/images/code-1/code1-1.png";
 import code1Image2 from "../assets/images/code-1/code1-2.png";
 import code1Image3 from "../assets/images/code-1/code1-3.png";
 import code2Image from "../assets/images/code-2/image.png";
+import stormy1 from "../assets/images/code-4/stormy-1.png";
+import stormy2 from "../assets/images/code-4/stormy-2.png";
+import stormy3 from "../assets/images/code-4/stormy-3.png";
+import stormy4 from "../assets/images/code-4/stormy-4.png";
+import stormy5 from "../assets/images/code-4/stormy-5.png";
+import stormy6 from "../assets/images/code-4/stormy-6.png";
 import paintBoyImage1 from "../assets/images/code-3/Paintboy-1.png";
 import paintBoyImage2 from "../assets/images/code-3/Paintboy-2.png";
 import paintBoyImage3 from "../assets/images/code-3/Paintboy-3.png";
@@ -36,6 +42,16 @@ export const designProjects = [
 ];
 
 export const codeProjects = [
+  {
+    id: "code-4",
+    title: "Stormy Home Care",
+    description:
+      "Static website for Stormy Wimber's in-home elder care business based in Portland, Maine. Built with vanilla HTML, CSS, and JavaScript — no frameworks. Deployed via Cloudflare Pages.",
+    images: [stormy1, stormy2, stormy3, stormy4, stormy5, stormy6],
+    link: "https://stormyhomecare.com/",
+    tags: ["HTML", "CSS", "JavaScript", "Cloudflare Pages"],
+    date: "2026-05",
+  },
   {
     id: "code-3",
     title: "PaintBoy",

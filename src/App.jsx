@@ -15,8 +15,8 @@ function App() {
     <div id="top">
       <Navbar />
       <Hero />
-      <ProjectSection id="design" title="Design Projects" projects={designProjects} />
       <ProjectSection id="code" title="Code Projects" projects={codeProjects} />
+      <ProjectSection id="design" title="Design Projects" projects={designProjects} />
       <ProjectSection id="school" title="School Projects" projects={schoolProjects} />
       <ProjectSection id="work" title="Work Projects" projects={workProjects} />
       <Footer />
