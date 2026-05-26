@@ -43,16 +43,6 @@ export const designProjects = [
 
 export const codeProjects = [
   {
-    id: "code-4",
-    title: "Stormy Home Care",
-    description:
-      "Static website for Stormy Wimber's in-home elder care business based in Portland, Maine. Built with vanilla HTML, CSS, and JavaScript — no frameworks. Deployed via Cloudflare Pages.",
-    images: [stormy1, stormy2, stormy3, stormy4, stormy5, stormy6],
-    link: "https://stormyhomecare.com/",
-    tags: ["HTML", "CSS", "JavaScript", "Cloudflare Pages"],
-    date: "2026-05",
-  },
-  {
     id: "code-3",
     title: "PaintBoy",
     description:
@@ -61,6 +51,16 @@ export const codeProjects = [
     link: "https://www.paintboy.app/",
     tags: ["React", "Cloudflare Workers"],
     date: "2026-03",
+  },
+  {
+    id: "code-4",
+    title: "Stormy Home Care",
+    description:
+      "Static website for Stormy Wimber's in-home elder care business based in Portland, Maine. Built with vanilla HTML, CSS, and JavaScript — no frameworks. Deployed via Cloudflare Pages.",
+    images: [stormy1, stormy2, stormy3, stormy4, stormy5, stormy6],
+    link: "https://stormyhomecare.com/",
+    tags: ["HTML", "CSS", "JavaScript", "Cloudflare Pages"],
+    date: "2026-05",
   },
   {
     id: "code-1",
